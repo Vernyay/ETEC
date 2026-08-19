@@ -1,0 +1,23 @@
+@startuml biblioteca
+
+class Livro{
+    -Titulo:String
+    -ISBN:String
+    -Disponível:boolean
+    +Reserva():void
+}
+class Usuário{
+    -Nome:String
+    -ID:int
+    +Empresta():void
+}
+class Empréstimo{
+    -Data:String
+    -Data_de_retorno:String
+    +Acaba():void
+}
+
+Usuário "1" -- "N" Empréstimo : faz
+Livro "1" -- "N" Empréstimo : participa
+
+@enduml

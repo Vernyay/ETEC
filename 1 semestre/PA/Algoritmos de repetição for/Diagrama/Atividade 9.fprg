@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-07 10:33:02 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MjM6MjAgIjsxOTI2"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MzM6MDIgIjsyOzIwMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vsoma, vmaior, vmenor, i, vnum, vmedia" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vsoma" expression="0"/>
+            <for variable="i" start="1" end="20" direction="inc" step="1">
+                <input variable="vnum"/>
+                <assign variable="vsoma" expression="vsoma+vnum"/>
+                <if expression="vnum &gt; vmaior">
+                    <then>
+                        <assign variable="vmaior" expression="vnum"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vnum &lt;= vmenor">
+                    <then>
+                        <assign variable="vmenor" expression="vnum"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="vmedia" expression="vsoma / 20"/>
+            <output expression="&quot;Maior n&#250;mero digitado: &quot;&amp;vmaior" newline="True"/>
+            <output expression="&quot;Menor n&#250;mero digitado: &quot;&amp;vmenor" newline="True"/>
+            <output expression="&quot;M&#233;dia dos n&#250;meros: &quot;&amp;vmedia" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

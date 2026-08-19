@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 09:43:10 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6Mzk6NDcgIjsxOTQ2"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6NDM6MTAgIjsxOzIwMzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vkmrodado, vdias, vtotal" type="Real" array="False" size=""/>
+            <input variable="vkmrodado"/>
+            <input variable="vdias"/>
+            <assign variable="vtotal" expression="(vkmrodado*2.2)+(vdias*90)"/>
+            <output expression="&quot;Voc&#234; vai pagar: &quot;&amp;vtotal&amp;&quot; reais no total&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

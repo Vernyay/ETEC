@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 3"/>
+        <attribute name="authors" value="Pc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-15 05:23:35 "/>
+        <attribute name="created" value="UGM7V0lMTElBTjsyMDI2LTA0LTE1OyIwNToxODo1MyAiOzE5MDQ="/>
+        <attribute name="edited" value="UGM7V0lMTElBTjsyMDI2LTA0LTE1OyIwNToyMzozNSAiOzE7MjAwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vlado1, vlado2, vlado3" type="Real" array="False" size=""/>
+            <input variable="vlado1"/>
+            <input variable="vlado2"/>
+            <input variable="vlado3"/>
+            <if expression="vlado1 + vlado2 &gt; vlado3 and vlado1 + vlado3 &gt; vlado2 and vlado2 + vlado3 &gt; vlado1">
+                <then>
+                    <if expression="vlado1 == vlado2 == vlado3">
+                        <then>
+                            <output expression="&quot;Equil&#225;tero&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="vlado1 == vlado2 or vlado1 == vlado3 or vlado2 == vlado3">
+                                <then>
+                                    <output expression="&quot;Is&#243;sceles&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Escaleno&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;N&#227;o formam um tri&#226;ngulo.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

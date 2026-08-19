@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-11 08:40:51 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDc7MjAyNi0wMy0xMTsiMDg6MTc6MDIgIjsxOTMy"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDc7MjAyNi0wMy0xMTsiMDg6NDA6NTEgIjsyOzIwNDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vprecogasolina, vodometroinicial, vodometrofinal, vgasolinagasta, vrecibopassageiro, vconsumogasolina, vlucro" type="Real" array="False" size=""/>
+            <input variable="vprecogasolina"/>
+            <input variable="vodometroinicial"/>
+            <input variable="vodometrofinal"/>
+            <input variable="vgasolinagasta"/>
+            <input variable="vrecibopassageiro"/>
+            <assign variable="vconsumogasolina" expression="(vodometrofinal-vodometroinicial)/vgasolinagasta"/>
+            <assign variable="vlucro" expression="vrecibopassageiro-(vgasolinagasta*vprecogasolina)"/>
+            <output expression="&quot;A quantidade de km/l que o carro fez foi de:&quot;&amp;vconsumogasolina" newline="True"/>
+            <output expression="&quot;Ele vai gastar:&quot;&amp;vlucro&amp;&quot;reais&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

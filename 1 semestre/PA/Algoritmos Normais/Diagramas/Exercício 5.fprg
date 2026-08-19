@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 09:34:23 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6MzI6MDUgIjsxOTMz"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6MzQ6MjMgIjsxOzIwNDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnota1, vnota2, vmedia" type="Real" array="False" size=""/>
+            <input variable="vnota1"/>
+            <input variable="vnota2"/>
+            <assign variable="vmedia" expression="(vnota1+vnota2)/2"/>
+            <output expression="&quot;Sua &#233; m&#233;dia &#233; de&quot;&amp;vmedia" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

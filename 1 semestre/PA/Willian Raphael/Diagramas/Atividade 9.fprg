@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 9"/>
+        <attribute name="authors" value="willian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 04:03:50 PM"/>
+        <attribute name="created" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDM6NDQ6MTggUE07MjU2Mw=="/>
+        <attribute name="edited" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDQ6MDM6NTAgUE07MTsyNjYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="pare" type="Boolean" array="False" size=""/>
+            <assign variable="pare" expression="True"/>
+            <while expression="pare==True">
+                <input variable="num"/>
+                <if expression="num&lt;0">
+                    <then>
+                        <assign variable="pare" expression="False"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;O fatorial de &quot;&amp;num&amp;&quot; &#233; &quot;&amp;fatorial(num)" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="fatorial" type="Integer" variable="resultado">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resultado" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="resultado" expression="1"/>
+            <for variable="i" start="2" end="n" direction="inc" step="1">
+                <assign variable="resultado" expression="resultado*i"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

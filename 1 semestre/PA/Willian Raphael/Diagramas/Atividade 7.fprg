@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 7"/>
+        <attribute name="authors" value="willian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 03:41:17 PM"/>
+        <attribute name="created" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDM6MzQ6MzcgUE07MjU2Mw=="/>
+        <attribute name="edited" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDM6NDE6MTcgUE07MTsyNjY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="op" type="String" array="False" size=""/>
+            <declare name="pare" type="Boolean" array="False" size=""/>
+            <assign variable="pare" expression="True"/>
+            <while expression="pare==True">
+                <input variable="numero"/>
+                <if expression="positivo(numero)">
+                    <then>
+                        <output expression="numero&amp;&quot; &#233; positivo.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="numero&amp;&quot; &#233; negativo.&quot;" newline="True"/>
+                    </else>
+                </if>
+                <input variable="op"/>
+                <if expression="op != &quot;s&quot;">
+                    <then>
+                        <assign variable="pare" expression="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="positivo" type="Boolean" variable="pos">
+        <parameters>
+            <parameter name="valor" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pos" type="Boolean" array="False" size=""/>
+            <if expression="valor&gt;=0">
+                <then>
+                    <assign variable="pos" expression="True"/>
+                </then>
+                <else>
+                    <assign variable="pos" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

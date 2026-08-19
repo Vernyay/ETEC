@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 7"/>
+        <attribute name="authors" value="Pc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-15 05:39:22 "/>
+        <attribute name="created" value="UGM7V0lMTElBTjsyMDI2LTA0LTE1OyIwNTozMzoxMyAiOzE4OTc="/>
+        <attribute name="edited" value="UGM7V0lMTElBTjsyMDI2LTA0LTE1OyIwNTozOToyMiAiOzE7MjAxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnota1, vnota2, vmedia" type="Real" array="False" size=""/>
+            <declare name="vletra" type="String" array="True" size="4"/>
+            <input variable="vnota1"/>
+            <input variable="vnota2"/>
+            <assign variable="vmedia" expression="(vnota2+vnota1)/2"/>
+            <assign variable="vletra[0]" expression="&quot;A&quot;"/>
+            <assign variable="vletra[1]" expression="&quot;B&quot;"/>
+            <assign variable="vletra[2]" expression="&quot;C&quot;"/>
+            <assign variable="vletra[3]" expression="&quot;D&quot;"/>
+            <assign variable="vletra[4]" expression="&quot;E&quot;"/>
+            <if expression="vmedia&gt;=9.0 and vmedia&lt;=10.0">
+                <then>
+                    <assign variable="vletra" expression="vletra[0]"/>
+                </then>
+                <else>
+                    <if expression="vmedia&gt;=7.5 and vmedia&lt;9.0">
+                        <then>
+                            <assign variable="vletra" expression="vletra[1]"/>
+                        </then>
+                        <else>
+                            <if expression="vmedia&gt;=6.0 and vmedia&lt;7.5">
+                                <then>
+                                    <assign variable="vletra" expression="vletra[2]"/>
+                                </then>
+                                <else>
+                                    <if expression="vmedia&gt;4.0 and vmedia&lt;6.0">
+                                        <then>
+                                            <assign variable="vletra" expression="vletra[3]"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="vletra" expression="vletra[4]"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Sua m&#233;dia &#233; de: &quot;&amp;vmedia" newline="True"/>
+            <output expression="&quot;Seu conceito &#233; de: &quot;&amp;vletra" newline="True"/>
+            <if expression="vletra==vletra[0] or vletra==vletra[1] or vletra==vletra[2]">
+                <then>
+                    <output expression="&quot;Aprovado!!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Reprovado!!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

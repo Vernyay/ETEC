@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-07 10:29:00 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMDk6NTk6NDggIjsxOTUz"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6Mjk6MDAgIjs0OzIwNDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, vsexo, valtura, vmediamulheres, vmaior, vmenor, vmediatotal, vcontmulher" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vmediatotal" expression="0"/>
+            <assign variable="vmediamulheres" expression="0"/>
+            <assign variable="vcontmulher" expression="0"/>
+            <for variable="i" start="1" end="50" direction="inc" step="1">
+                <input variable="vsexo"/>
+                <input variable="valtura"/>
+                <assign variable="vmediatotal" expression="vmediatotal+valtura"/>
+                <if expression="valtura&gt;vmaior">
+                    <then>
+                        <assign variable="vmaior" expression="valtura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="valtura&lt;vmenor">
+                    <then>
+                        <assign variable="vmenor" expression="valtura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vsexo==2">
+                    <then>
+                        <assign variable="vmediamulheres" expression="vmediamulheres+valtura"/>
+                        <assign variable="vcontmulher" expression="vcontmulher+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="vmediatotal" expression="vmediatotal/50"/>
+            <assign variable="vmediamulheres" expression="vmediamulheres/vcontmulher"/>
+            <output expression="&quot;A maior altura &#233; &quot;&amp;vmaior" newline="True"/>
+            <output expression="&quot;A menor altura &#233; &quot;&amp;vmenor" newline="True"/>
+            <output expression="&quot;A m&#233;dia de todas as alturas &#233; &quot;&amp;vmediatotal" newline="True"/>
+            <output expression="&quot;A m&#233;dia das alturas de todas as mulheres &#233; &quot;&amp;vmediamulheres" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

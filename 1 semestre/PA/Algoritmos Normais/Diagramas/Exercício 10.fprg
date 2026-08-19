@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 10:00:14 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6NTQ6NTQgIjsxOTQx"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMTA6MDA6MTQgIjsxOzIwMjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum1, vnum2, vsoma, vdivisao, vmenos, vvezes" type="Real" array="False" size=""/>
+            <input variable="vnum1"/>
+            <input variable="vnum2"/>
+            <assign variable="vsoma" expression="vnum1+vnum2"/>
+            <assign variable="vdivisao" expression="vnum1/vnum2"/>
+            <assign variable="vmenos" expression="vnum1-vnum2"/>
+            <assign variable="vvezes" expression="vnum1*vnum2"/>
+            <output expression="&quot;A soma desses n&#250;meros &#233; &quot;&amp;vsoma" newline="True"/>
+            <output expression="&quot;A divis&#227;o desses n&#250;meros &#233; &quot;&amp;vdivisao" newline="True"/>
+            <output expression="&quot;A subtra&#231;&#227;o desses n&#250;meros &#233; &quot;&amp;vmenos" newline="True"/>
+            <output expression="&quot;A multiplica&#231;&#227;o desses n&#250;meros &#233; &quot;&amp;vvezes" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

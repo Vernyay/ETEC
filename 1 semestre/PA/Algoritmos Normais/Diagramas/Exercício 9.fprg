@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 09:54:51 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6NTI6MTEgIjsxOTMy"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6NTQ6NTEgIjsxOzIwNDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vprecolitro, vsaldo, vrecebeu" type="Real" array="False" size=""/>
+            <input variable="vprecolitro"/>
+            <input variable="vsaldo"/>
+            <assign variable="vrecebeu" expression="vsaldo/vprecolitro"/>
+            <output expression="&quot;Ele recebeu &quot;&amp;vrecebeu&amp;&quot; litros no carro&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-26 09:59:22 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDk7MjAyNi0wMy0yNjsiMDk6NTM6MzAgIjsxOTQy"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDk7MjAyNi0wMy0yNjsiMDk6NTk6MjIgIjsxOzIwNTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum" type="Real" array="False" size=""/>
+            <input variable="vnum"/>
+            <if expression="vnum=0">
+                <then>
+                    <output expression="&quot;Ele &#233; igual &#224; 10&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="vnum&gt;10">
+                        <then>
+                            <output expression="vnum&amp;&quot;&#233; maior que 10&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="vnum&amp;&quot;&#233; menor que 10&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

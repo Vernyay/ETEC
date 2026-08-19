@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-15 06:59:50 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0xNTsiMDY6NTI6MTkgIjsxOTM5"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0xNTsiMDY6NTk6NTAgIjsxOzIwNDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vcodigo" type="Integer" array="False" size=""/>
+            <declare name="vdescricao" type="String" array="True" size="4"/>
+            <input variable="vcodigo"/>
+            <assign variable="vdescricao[0]" expression="&quot;Alimento n&#227;o perec&#237;vel&quot;"/>
+            <assign variable="vdescricao[1]" expression="&quot;Alimento perec&#237;vel&quot;"/>
+            <assign variable="vdescricao[2]" expression="&quot;Vestu&#225;rio&quot;"/>
+            <assign variable="vdescricao[3]" expression="&quot;Higiene pessoal&quot;"/>
+            <assign variable="vdescricao[4]" expression="&quot;Utens&#237;lios dom&#233;sticos&quot;"/>
+            <if expression="vcodigo==1">
+                <then>
+                    <assign variable="vdescricao" expression="vdescricao[0]"/>
+                </then>
+                <else>
+                    <if expression="vcodigo==2 or vcodigo==3 or vcodigo==4">
+                        <then>
+                            <assign variable="vdescricao" expression="vdescricao[1]"/>
+                        </then>
+                        <else>
+                            <if expression="vcodigo==5 or vcodigo==6">
+                                <then>
+                                    <assign variable="vdescricao" expression="vdescricao[2]"/>
+                                </then>
+                                <else>
+                                    <if expression="vcodigo==7">
+                                        <then>
+                                            <assign variable="vdescricao" expression="vdescricao[3]"/>
+                                        </then>
+                                        <else>
+                                            <if expression="vcodigo==8 or vcodigo==9 or vcodigo==10">
+                                                <then>
+                                                    <assign variable="vdescricao" expression="vdescricao[4]"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="vcodigo&lt;=10">
+                <then>
+                    <output expression="&quot;Esse item &#233; um: &quot;&amp;vdescricao" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Produto inv&#225;lido&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

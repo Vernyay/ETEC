@@ -1,0 +1,73 @@
+@startuml e-commerce
+' Configura a direção do diagrama para facilitar a leitura
+left to right direction
+
+skinparam packageStyle rectangle
+
+' Definição dos Atores baseada no levantamento [cite: 3, 25, 32]
+actor "Cliente" as cliente
+actor "Admin" as admin
+actor "Super-Admin" as superadmin
+
+rectangle "Sistema E-commerce Streetwear" {
+    
+    package "Gestão de Usuário e Acesso" {
+        usecase "Cadastrar Conta" as UC4
+        usecase "Fazer Login/Logout" as UC5
+        usecase "Alterar Senha" as UC6
+        usecase "Gerenciar Endereços" as UC9
+        usecase "Cadastrar Métodos de Pagamento" as UC8
+    }
+
+    package "Experiência de Compra" {
+        usecase "Pesquisar Produtos" as UC14
+        usecase "Visualizar Vitrines (Alta/Desconto/Frete Grátis)" as UC11
+        usecase "Ver Detalhes e Variantes (Tamanho/Estoque)" as UC15
+        usecase "Gerenciar Carrinho" as UC17
+        usecase "Estimar Frete" as UC19
+        usecase "Finalizar Compra e Pagar" as UC21
+        usecase "Rastrear Status do Pedido" as UC23
+    }
+
+    package "Administração (Back-office)" {
+        usecase "Visualizar Dashboard Financeiro" as UC26
+        usecase "Gerenciar Produtos e Estoque" as UC28
+        usecase "Gerenciar Pedidos Pendentes" as UC29
+        usecase "Aplicar Descontos" as UC31
+    }
+
+    package "Super Controle" {
+        usecase "Gerenciar Usuários Admin" as UC33
+        usecase "Controlar Saques e Financeiro" as UC34
+        usecase "Configurar APIs (Frete/Pagamento)" as UC35
+    }
+}
+
+' Relacionamentos do Cliente [cite: 4, 5, 6, 8, 9, 10, 11, 14, 15, 17, 18, 19, 21, 23]
+cliente --> UC4
+cliente --> UC5
+cliente --> UC6
+cliente --> UC8
+cliente --> UC9
+cliente --> UC11
+cliente --> UC14
+cliente --> UC15
+cliente --> UC17
+cliente --> UC19
+cliente --> UC21
+cliente --> UC23
+
+' Relacionamentos do Admin [cite: 26, 27, 28, 29, 30, 31]
+admin --> UC26
+admin --> UC28
+admin --> UC29
+admin --> UC31
+
+' Relacionamentos do Super-Admin [cite: 33, 34, 35]
+' O Super-Admin herda as capacidades do Admin
+superadmin --|> admin
+superadmin --> UC33
+superadmin --> UC34
+superadmin --> UC35
+
+@endum

@@ -1,0 +1,52 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.banner {
+    padding: 50px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('gamescom-nintendo.png');
+    background-size: cover;
+    color: limegreen;
+}
+
+#nav {
+    background: #1f1f1f;
+    padding: 10px;
+}
+
+#nav a {
+    color: limegreen;
+    text-decoration: none;
+}
+
+table {
+    margin: auto;
+    border: 1px solid limegreen;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.destaque {
+    color: limegreen;
+    font-weight: bold;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#main {
+    background-color: #333;
+    border-radius: 5px;
+}

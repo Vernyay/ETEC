@@ -1,0 +1,184 @@
+/* Dupla: Willian Raphael e Giuliano Bruno */
+
+
+body{
+    background: #406e9b;
+}
+
+
+
+.cabeça{
+    text-align: center;
+    background: #235284;
+    color: #F8F8FF;
+    padding: 50px;
+    font-size: larger;
+    border-radius: 15px;
+    max-width: 300px;
+    margin: auto;
+    box-shadow: 0 0 10px #030303;
+    transition: transform 0.3s ease;
+}
+
+.cabeça:hover{
+    transform: scale(1.05);
+}
+
+.titulo{
+    padding: 20px;
+}
+
+button{
+    background: #3271a5;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: medium;
+    color: #F8F8FF;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 3px #030303;
+
+}
+button:hover{
+    transform: scale(1.05);
+}
+
+.contato{
+    text-align: center;
+    color: #F8F8FF;
+    padding: auto;
+    background: #195da2;
+    border-radius: 15px;
+    margin: auto;
+    max-width: 300px;
+    box-shadow: 0 0 10px #030303;
+    transition: transform 0.3s ease;
+}
+
+.contato:hover{
+    transform: scale(1.05);
+}
+
+.contato p{
+    padding-top: 20px;
+}
+
+.banner{
+    position: relative;
+    margin: 40px auto;
+    width: 300px;
+}
+
+.banner img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+    border-radius: 10px;
+    }
+.banner:hover .overlay{
+    opacity: 1;
+}
+.overlay h2{
+    padding-left: 10px;
+}
+
+.overlay p{
+    padding-right: 10px;
+}
+
+.cards{
+    text-align: center;
+    color: #F8F8FF;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card{
+    background: #195da2;
+    border-radius: 15px;
+    margin: auto;
+    flex: 1;
+    min-width: 150px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 10px #030303;
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.cards img{
+    margin: 10px;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+footer{
+    text-align: center;
+    color: #F8F8FF;
+    background: #195da2;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #030303;
+    font-size: larger;
+}
+
+.formulario{
+    background: #195da2;
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #030303;
+    color: #F8F8FF;
+    position: center;
+}
+
+input{
+    width: 100%;
+    padding: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid  #ccc;
+}
+
+.radio-group input{
+    width: auto;
+}
+
+.check-group input{
+    width: auto;
+}
+
+select{
+    width: 100%;
+    padding: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid  #ccc;
+}

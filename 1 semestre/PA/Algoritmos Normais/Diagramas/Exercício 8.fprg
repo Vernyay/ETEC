@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 09:52:08 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6NDM6MTMgIjsxOTM0"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6NTI6MDggIjsxOzIwNDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vlargura, vcomprimento, varea, vvalormercado, vmercado" type="Real" array="False" size=""/>
+            <input variable="vlargura"/>
+            <input variable="vcomprimento"/>
+            <input variable="vvalormercado"/>
+            <assign variable="varea" expression="vlargura*vcomprimento"/>
+            <assign variable="vmercado" expression="varea*vvalormercado"/>
+            <output expression="&quot;A &#225;rea do seu terreno &#233; de &quot;&amp;varea&amp;&quot; metros&quot;" newline="True"/>
+            <output expression="&quot;Seu terreno vale &quot;&amp;vmercado&amp;&quot; reais&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

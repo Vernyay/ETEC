@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-07 08:21:29 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNC1NMTI7MjAyNi0wNC0wNzsiMDg6MDg6NTYgIjsxOTQy"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNC1NMTI7MjAyNi0wNC0wNzsiMDg6MjE6MjkgIjsxOzIwNDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vcompra, vdesconto" type="Real" array="False" size=""/>
+            <input variable="vcompra"/>
+            <if expression="vcompra&gt;0 and vcompra&lt;=100">
+                <then>
+                    <assign variable="vdesconto" expression="vcompra*0.02"/>
+                </then>
+                <else>
+                    <if expression="vcompra&gt;100 and vcompra&lt;=300">
+                        <then>
+                            <assign variable="vdesconto" expression="vcompra*0.05"/>
+                        </then>
+                        <else>
+                            <if expression="vcompra&gt;300 and vcompra&lt;=700">
+                                <then>
+                                    <assign variable="vdesconto" expression="vcompra*0.09"/>
+                                </then>
+                                <else>
+                                    <if expression="vcompra&gt;700 and vcompra&lt;=1200">
+                                        <then>
+                                            <assign variable="vdesconto" expression="vcompra*0.12"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="vdesconto" expression="vcompra*0.15"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Seu desconto &#233; de:&quot;&amp;vdesconto" newline="True"/>
+            <output expression="&quot;Sua compra foi de:&quot;&amp;vcompra-vdesconto" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

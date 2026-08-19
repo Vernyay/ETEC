@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exerc&#237;cio 4"/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-25 02:33:06 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6MjY6NDIgIjsxOTM3"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6MzI6MDMgIjsxOzIwMzk="/>
+        <attribute name="edited" value="UGM7V0lMTElBTjsyMDI2LTAzLTI1OyIwMjozMzowNiAiOzE7MjAwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vcompra, vpercentualdesconto, vreaisdesconto, vnovovalor" type="Real" array="False" size=""/>
+            <input variable="vcompra"/>
+            <input variable="vpercentualdesconto"/>
+            <assign variable="vreaisdesconto" expression="vcompra * (vpercentualdesconto/100)"/>
+            <assign variable="vnovovalor" expression="vcompra-vreaisdesconto"/>
+            <output expression="&quot;Vai ter um desconto de&quot;&amp;vreaisdesconto&amp;&quot;reais&quot;" newline="True"/>
+            <output expression="&quot;Tendo um total de&quot;&amp;vnovovalor&amp;&quot;reais&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

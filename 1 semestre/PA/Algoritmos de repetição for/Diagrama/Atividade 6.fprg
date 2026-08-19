@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-07 10:32:18 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MTM6MTggIjsxOTMy"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MzI6MTggIjsyOzIwNDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vsomaidades, vtotalpessoas, vidade, vmedia, i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vsomaidades" expression="0"/>
+            <for variable="i" start="1" end="20" direction="inc" step="1">
+                <input variable="vidade"/>
+                <assign variable="vsomaidades" expression="vsomaidades+vidade"/>
+            </for>
+            <assign variable="vmedia" expression="vsomaidades / vtotalpessoas"/>
+            <output expression="&quot;A m&#233;dia das idades &#233;: &quot;&amp;vmedia&amp;&quot; anos&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

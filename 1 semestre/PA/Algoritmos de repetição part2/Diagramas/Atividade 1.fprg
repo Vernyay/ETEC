@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-30 10:28:09 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6MjU6MzggIjsxOTMx"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6Mjg6MDkgIjsxOzIwNDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum, vsoma, vmedia, vcont" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <while expression="vcont&lt;15">
+                <input variable="vnum"/>
+                <assign variable="vsoma" expression="vsoma+vnum"/>
+                <assign variable="vcont" expression="vcont+1"/>
+            </while>
+            <assign variable="vmedia" expression="vsoma/15"/>
+            <output expression="&quot;A soma dos n&#250;meros &#233; &quot;&amp;vsoma" newline="True"/>
+            <output expression="&quot;A m&#233;dia dos n&#250;meros &#233; &quot;&amp;vmedia" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

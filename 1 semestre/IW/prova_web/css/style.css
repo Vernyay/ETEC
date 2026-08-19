@@ -1,0 +1,358 @@
+:root{
+    --cor1:#0f172a;
+    --cor2:#38bdf8;
+    --cor3:#f8fafc;
+    --sombra: 0 10px 25px rgba(0,0,0,0, 0.2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #DBE7F3, #FBF1E5);
+    scroll-behavior: smooth;
+}
+
+header{
+    background: rgb(1, 143, 199, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra);
+}
+
+header h1{
+    color: white;
+}
+
+nav{
+    margin-top: 10px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--cor2);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+.banner{
+    height: 400px;
+    background: url(../imagens/banner.webp);
+    background-size: cover;
+    background-position: center;
+    position:  relative;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay h2{
+    font-size: 60px;
+    animation: entrada 2s ease;
+}
+
+@keyframes entrada {
+    from{
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.container { /* Estilo do container principal com layout flexível e espaçamento */
+
+    display: flex;
+
+    gap: 30px;
+
+    padding: 40px;
+}
+
+main { /* Estilo da seção principal com flex para ocupar mais espaço */
+
+    flex: 3;
+}
+
+aside { /* Estilo da barra lateral com fundo semi-transparente, efeito de desfoque e posição sticky */
+
+    flex: 1;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    backdrop-filter: blur(10px);
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    height: fit-content;
+
+    box-shadow: var(--sombra);
+
+    position: sticky;
+
+    top: 120px;
+
+    transition: 0.4s;
+}
+
+aside:hover { /* Efeito de elevação ao passar o mouse sobre a barra lateral */
+
+    transform: translateY(-5px);
+}
+
+aside h3 { /* Estilo do título da barra lateral */
+
+    margin-bottom: 20px;
+}
+
+aside ul { /* Estilo da lista de links na barra lateral, removendo marcadores e adicionando espaçamento */
+   
+    list-style: none;
+}
+
+aside li { /* Estilo dos itens da lista na barra lateral com espaçamento e transição para hover */
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #ccc;
+
+    transition: 0.3s;
+}
+
+aside li:hover {
+
+    color: var(--cor2);
+
+    transform: translateX(5px);
+}
+
+.cards { /* Estilo do container de cartões com layout flexível, espaçamento e margem superior */
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin-top: 30px;
+}
+
+.card { /* Estilo dos cartões com largura fixa, fundo semi-transparente, efeito de desfoque, bordas arredondadas, sombra e transição para hover */
+
+    width: 300px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    transition: 0.5s;
+}
+
+.card:hover { /* Efeito de elevação e leve aumento ao passar o mouse sobre o cartão */
+ 
+    transform:
+        translateY(-10px) scale(1.03);
+}
+
+.img-box { /* Estilo do contêiner de imagem dentro do cartão com posição relativa para a legenda */
+ 
+    position: relative;
+
+    overflow: hidden;
+}
+
+.img-box img { /* Estilo da imagem dentro do cartão, garantindo que ocupe toda a largura e tenha altura fixa com ajuste de corte */ 
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.legenda { /* Estilo da legenda que aparece sobre a imagem, com posição absoluta, fundo semi-transparente, cor do texto, padding, alinhamento e transição para hover */
+
+    position: absolute;
+
+    bottom: -100%;
+
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+
+    transition: 0.5s;
+}
+
+.img-box:hover .legenda { /* Efeito para mostrar a legenda ao passar o mouse sobre a imagem, movendo-a para a posição visível */
+
+    bottom: 0;
+}
+
+.card h3 {
+
+    padding: 20px 20px 10px;
+}
+
+.card p {
+
+    padding: 0 20px 20px;
+}
+
+button {
+
+    margin: 20px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    background: #B1D0E2;
+
+    color: white;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    background: #83C0DF;
+
+    transform: scale(1.05);
+}
+
+.pagina {
+
+    padding: 40px;
+}
+
+footer { /* Estilo do rodapé com fundo da cor principal, cor do texto, alinhamento, padding e margem superior */
+
+    background: rgb(1, 143, 199);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+/* Media query para telas menores, ajustando o layout para melhor responsividade */
+@media(max-width:900px) { 
+
+    .container {
+
+        flex-direction: column;
+    }
+
+    .cards {
+
+        justify-content: center;
+    }
+
+    .overlay h2 {
+
+        font-size: 40px;
+    }
+
+    aside {
+
+        position: relative;
+
+        top: 0;
+    }
+}
+
+.formulario{
+    background: #018FC7;
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #030303;
+    color: #F8F8FF;
+    position: center;
+}
+
+input{
+    width: 100%;
+    padding: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid  #ccc;
+}
+
+.radio-group input{
+    width: auto;
+}
+
+.check-group input{
+    width: auto;
+}
+
+select{
+    width: 100%;
+    padding: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid  #ccc;
+}
+
+.mensagem{
+    padding-bottom: 50px;
+}

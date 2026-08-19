@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição - GameFan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="nav">
+        <a href="index.html">Início</a> | <a href="programacao.html">Programação</a> | <a href="inscricao.html">Inscrição</a>
+    </nav>
+
+    <header class="banner">
+        <h1>Inscrição</h1>
+        <p>Siga o passo a passo</p>
+    </header>
+    <form>
+        <p>Nome: <input type="text" name="nome" required></p>
+        <p>Email: <input type="email" name="email" required></p>
+        <p>Idade: <input type="number" min="0" max="120" name="idade"></p>
+        
+        <p>Tipo: 
+            <select name="tipo">
+                <option>Visitante</option>
+                <option>Competidor</option>
+            </select>
+        </p>
+
+        <p>Gênero Favorito: 
+            <input type="radio" name="g" value="fps"> FPS 
+            <input type="radio" name="g" value="rpg"> RPG
+        </p>
+
+        <p>Comentários:<br>
+            <textarea name="msg"></textarea>
+        </p>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <footer>
+        <p>&copy; GameFan 2026 - contato@ficticio.com</p>
+    </footer>
+</body>
+</html>

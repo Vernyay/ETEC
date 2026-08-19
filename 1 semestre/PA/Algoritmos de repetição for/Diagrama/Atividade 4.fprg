@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-07 10:30:25 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MDQ6MDkgIjsxOTMy"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MzA6MjUgIjsyOzIwMzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vfaixa1, vfaixa2, vfaixa3, vfaixa4, vfaixa5, vidade, i, vpercprimeira, vpercultima" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vfaixa1" expression="0"/>
+            <assign variable="vfaixa2" expression="0"/>
+            <assign variable="vfaixa3" expression="0"/>
+            <assign variable="vfaixa4" expression="0"/>
+            <assign variable="vfaixa5" expression="0"/>
+            <for variable="i" start="1" end="15" direction="inc" step="1">
+                <input variable="vidade"/>
+                <if expression="vidade &lt;= 15">
+                    <then>
+                        <assign variable="vfaixa1" expression="vfaixa1+1"/>
+                    </then>
+                    <else>
+                        <if expression="vidade &lt;= 30">
+                            <then>
+                                <assign variable="vfaixa2" expression="vfaixa2+1"/>
+                            </then>
+                            <else>
+                                <if expression="vidade &lt;= 45">
+                                    <then>
+                                        <assign variable="vfaixa3" expression="vfaixa3+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="vidade &lt;= 60">
+                                            <then>
+                                                <assign variable="vfaixa4" expression="vfaixa4+1"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="vfaixa5" expression="vfaixa5+1"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <assign variable="vpercprimeira" expression="(vfaixa1 / 15) * 100"/>
+            <assign variable="vpercultima" expression="(vfaixa5 / 15) * 100"/>
+            <output expression="&quot;At&#233; 15 anos: &quot;&amp;vfaixa1" newline="True"/>
+            <output expression="&quot;De 16 a 30 anos: &quot;&amp;vfaixa2" newline="True"/>
+            <output expression="&quot;De 31 a 45 anos: &quot;&amp;vfaixa3" newline="True"/>
+            <output expression="&quot;De 46 a 60 anos: &quot;&amp;vfaixa4" newline="True"/>
+            <output expression="&quot;Acima de 61 anos: &quot;&amp;vfaixa5" newline="True"/>
+            <output expression="&quot;Pessoas na 1&#170; faixa (at&#233; 15 anos): &quot;&amp;vpercprimeira&amp;&quot;%&quot;" newline="True"/>
+            <output expression="&quot;Pessoas na &#250;ltima faixa (acima de 61 anos): &quot;&amp;vpercultima&amp;&quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

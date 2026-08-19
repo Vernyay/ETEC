@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-15 07:03:52 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0xNTsiMDY6NTk6NTIgIjsxOTQz"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0xNTsiMDc6MDM6NTIgIjsxOzIwNDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vemprestimo, vnparcelas, vparcela, vsalario, vtotal" type="Real" array="False" size=""/>
+            <input variable="vemprestimo"/>
+            <input variable="vnparcelas"/>
+            <input variable="vsalarios"/>
+            <assign variable="vtotal" expression="vemprestimo * 1.10"/>
+            <assign variable="vparcela" expression="vtotal / vnparcelas"/>
+            <if expression="vparcela &lt;= (vsalario * 0.30)">
+                <then>
+                    <output expression="&quot;Empr&#233;stimo APROVADO&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Empr&#233;stimo NEGADO&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

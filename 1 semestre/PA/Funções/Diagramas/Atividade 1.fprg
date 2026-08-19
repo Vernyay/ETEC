@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 1"/>
+        <attribute name="authors" value="willian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 01:40:47 PM"/>
+        <attribute name="created" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDE6MTU6NTggUE07MjU2Mw=="/>
+        <attribute name="edited" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDE6NDA6NDcgUE07MzsyNjY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="salario, reajuste, somar" type="Real" array="False" size=""/>
+            <declare name="pare" type="Boolean" array="False" size=""/>
+            <assign variable="pare" expression="True"/>
+            <while expression="pare==True">
+                <input variable="salario"/>
+                <input variable="reajuste"/>
+                <if expression="salario &lt; 0 or reajuste &lt; 0">
+                    <then>
+                        <assign variable="pare" expression="False"/>
+                    </then>
+                    <else>
+                        <assign variable="somar" expression="soma(salario, reajuste)"/>
+                        <output expression="&quot;O sal&#225;rio desse funcion&#225;rio reajustado &#233; R$&quot;&amp;somar" newline="True"/>
+                        <if expression="somar&lt;1400">
+                            <then>
+                                <output expression="&quot;Sal&#225;rio abaixo da m&#233;dia!!!&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="somar&gt;=1400 and somar&lt;=1800">
+                                    <then>
+                                        <output expression="&quot;Sal&#225;rio dentro da m&#233;dia!!!&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Sal&#225;rio acima da m&#233;dia!!!&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="somar" type="Real" variable="soma">
+        <parameters>
+            <parameter name="vn1" type="Real" array="False"/>
+            <parameter name="vn2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="soma" type="Real" array="False" size=""/>
+            <assign variable="soma" expression="vn1+vn2"/>
+        </body>
+    </function>
+</flowgorithm>

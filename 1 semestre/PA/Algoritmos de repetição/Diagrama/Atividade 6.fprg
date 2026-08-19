@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 6"/>
+        <attribute name="authors" value="willraphael"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-01 10:39:22 AM"/>
+        <attribute name="created" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDQtMjY7MDQ6MTg6MDEgUE07MzQ3Mw=="/>
+        <attribute name="edited" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDUtMDE7MTA6Mzk6MjIgQU07MjszNTY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum, vmedia, vcont, vmaior, vmenor, vsomainter, vsomatotal" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <assign variable="vsomatotal" expression="0"/>
+            <assign variable="vmaior" expression="0"/>
+            <assign variable="vmenor" expression="0"/>
+            <while expression="vcont&lt;5">
+                <input variable="vnum"/>
+                <assign variable="vsomatotal" expression="vsomatotal+vnum"/>
+                <if expression="vnum&gt;vmaior or vmaior==0">
+                    <then>
+                        <assign variable="vmaior" expression="vnum"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vnum&lt;vmenor or vmenor==0">
+                    <then>
+                        <assign variable="vmenor" expression="vnum"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="vsomainter" expression="(vsomatotal-vmaior)-vmenor"/>
+                <assign variable="vmedia" expression="somainter/3"/>
+                <assign variable="vcont" expression="vcont+1"/>
+            </while>
+            <output expression="&quot;A m&#233;dia dos intermedi&#225;rios &#233;: &quot;&amp;vmedia" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

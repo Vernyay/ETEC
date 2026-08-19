@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Atividade 3"/>
+        <attribute name="authors" value="willraphael"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-05 08:47:24 "/>
+        <attribute name="created" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDQtMjY7MDQ6MDA6NDMgUE07MzQ3MA=="/>
+        <attribute name="edited" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDUtMDE7MTA6MTc6MjcgQU07MzszNTY2"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDE7MjAyNi0wNS0wNTsiMDg6NDc6MjQgIjsyOzIwNDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum, vcont, vmaior, vmenor" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <assign variable="vmaior" expression="0"/>
+            <assign variable="vmenor" expression="0"/>
+            <for variable="vcont" start="1" end="15" direction="inc" step="1">
+                <input variable="vnum"/>
+                <if expression="vmaior==0 and vmenor==0">
+                    <then>
+                        <assign variable="vmaior" expression="vnum"/>
+                        <assign variable="vmenor" expression="vnum"/>
+                    </then>
+                    <else>
+                        <if expression="vnum&gt;vmaior">
+                            <then>
+                                <assign variable="vmaior" expression="vnum"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="vnum&lt;vmenor">
+                            <then>
+                                <assign variable="vmenor" expression="vnum"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;O maior n&#250;mero &#233;: &quot;&amp;vmaior" newline="True"/>
+            <output expression="&quot;O menor n&#250;mero &#233;: &quot;&amp;vmenor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

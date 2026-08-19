@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Atividade 7"/>
+        <attribute name="authors" value="willraphael"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-06 07:55:09 "/>
+        <attribute name="created" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDQtMjY7MDQ6MjE6MzkgUE07MzQ3OA=="/>
+        <attribute name="edited" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDQtMjY7MDQ6MjY6NTEgUE07MTszNTg1"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNS0wNjsiMDc6NTU6MDkgIjsyOzIwNTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vcont, vaprovados, vreprovados, vmedia" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <for variable="vcont" start="1" end="10" direction="inc" step="1">
+                <assign variable="vmedia" expression="0"/>
+                <assign variable="vcontnota" expression="0"/>
+                <for variable="vcont" start="1" end="4" direction="inc" step="1">
+                    <input variable="vnota"/>
+                    <assign variable="vmedia" expression="vmedia+vnota"/>
+                    <assign variable="vcontnota" expression="vcontnota+1"/>
+                </for>
+                <assign variable="vmedia" expression="vmedia/4"/>
+                <output expression="&quot;A m&#233;dia desse aluno &#233;: &quot;&amp;vmedia" newline="True"/>
+                <if expression="vmedia &gt;= 7">
+                    <then>
+                        <output expression="&quot;Situa&#231;&#227;o: Aprovado&quot;" newline="True"/>
+                        <assign variable="vaprovados" expression="vaprovados+1"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Situa&#231;&#227;o: Reprovado&quot;" newline="True"/>
+                        <assign variable="vreprovados" expression="vreprovados+1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Total de aprovados: &quot;&amp;vaprovados" newline="True"/>
+            <output expression="&quot;Total de reprovados: &quot;&amp;vreprovados" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

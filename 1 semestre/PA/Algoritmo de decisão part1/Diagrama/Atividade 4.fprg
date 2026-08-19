@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-26 10:43:37 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDk7MjAyNi0wMy0yNjsiMTA6Mzc6NDYgIjsxOTQz"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDk7MjAyNi0wMy0yNjsiMTA6NDM6MzcgIjsxOzIwNDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vidade" type="Real" array="False" size=""/>
+            <input variable="vidade"/>
+            <if expression="vidade&lt;12 or vidade=12">
+                <then>
+                    <output expression="&quot;Categoria Infantil&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="12&lt;vidade and (vidade&lt;18 or vidade=18)">
+                        <then>
+                            <output expression="&quot;Categoria Juvenil&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Categoria Adulta&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-01 08:14:09 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTA7MjAyNi0wNC0wMTsiMDg6MDM6MzYgIjsxOTI4"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTA7MjAyNi0wNC0wMTsiMDg6MTQ6MDkgIjsxOzIwMzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vidade, vcontribuicao" type="Integer" array="False" size=""/>
+            <input variable="vidade"/>
+            <input variable="vcontribuicao"/>
+            <if expression="vidade&gt;=65">
+                <then>
+                    <output expression="&quot;Aposentado&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="vidade&gt;=60 and vcontribuicao&gt;=25">
+                        <then>
+                            <output expression="&quot;Aposentado&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="vcontribuicao&gt;=30">
+                                <then>
+                                    <output expression="&quot;Aposentado&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;N&#227;o est&#225; aposentado&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

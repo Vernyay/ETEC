@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-08 08:18:22 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0wODsiMDg6MDU6MTAgIjsxOTMy"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0wODsiMDg6MTg6MjIgIjsxOzIwNDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vsalario, vtempo, vfilhos, vtempocasado, vhorasextras, vreajuste" type="Real" array="False" size=""/>
+            <input variable="vsalario"/>
+            <input variable="vtempo"/>
+            <input variable="vfilhos"/>
+            <input variable="vtempocasado"/>
+            <input variable="vhorasextras"/>
+            <if expression="vtempo&gt;5 and vfilhos&gt;2 and vtempocasado&gt;2 and vhorasextras&gt;10">
+                <then>
+                    <assign variable="vreajuste" expression="vsalario*0.05"/>
+                    <output expression="&quot;Voc&#234; vai receber o b&#244;nus no sal&#225;rio, seu novo sal&#225;rio ser&#225; de: &quot;&amp;vsalario+vreajuste&amp;&quot; Reais!!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Voc&#234; n&#227;o atendeu a todos os requisitos, voc&#234; vai continuar com o mesmo sal&#225;rio!!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

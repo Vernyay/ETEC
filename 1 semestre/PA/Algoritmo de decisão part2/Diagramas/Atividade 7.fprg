@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 8"/>
+        <attribute name="authors" value="Pc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-15 05:47:13 "/>
+        <attribute name="created" value="UGM7V0lMTElBTjsyMDI2LTA0LTE1OyIwNTozOToyNCAiOzE5MDU="/>
+        <attribute name="edited" value="UGM7V0lMTElBTjsyMDI2LTA0LTE1OyIwNTo0NzoxMyAiOzE7MjAxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vbruto, vfgts, vinssv, vir, vliquido, vqtdh, vsind, vvalorh, vtotaldesc" type="Real" array="False" size=""/>
+            <input variable="vvalorh"/>
+            <input variable="vqtdh"/>
+            <assign variable="vbruto" expression="vvalorh*vqtdh"/>
+            <if expression="vbruto &lt;= 900">
+                <then>
+                    <assign variable="vir" expression="0"/>
+                </then>
+                <else>
+                    <if expression="vbruto &lt;= 1500">
+                        <then>
+                            <assign variable="vir" expression="vbruto*0.05"/>
+                        </then>
+                        <else>
+                            <if expression="vbruto &lt;= 2500">
+                                <then>
+                                    <assign variable="vir" expression="vbruto*0.10"/>
+                                </then>
+                                <else>
+                                    <assign variable="vir" expression="vbruto*0.20"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="vsind" expression="vbruto * 0.03"/>
+            <assign variable="vinss" expression="vbruto * 0.10"/>
+            <assign variable="vfgts" expression="vbruto * 0.01"/>
+            <assign variable="vtotaldesc" expression="vir + vsind + vinss"/>
+            <assign variable="vliquido" expression="vbruto - vtotaldesc"/>
+            <output expression="&quot;Sal&#225;rio Bruto: R$ &quot;&amp;vbruto" newline="True"/>
+            <output expression="&quot;(-) IR: R$ &quot;&amp;vir" newline="True"/>
+            <output expression="&quot;(-) Sindicato: R$ &quot;&amp;vsind" newline="True"/>
+            <output expression="&quot;(-) INSS: R$ &quot;&amp;vinss" newline="True"/>
+            <output expression="&quot;FGTS: R$ &quot;&amp;vfgts" newline="True"/>
+            <output expression="&quot;Total de descontos: R$ &quot;&amp;vtotaldesc" newline="True"/>
+            <output expression="&quot;Sal&#225;rio L&#237;quido: R$&quot;&amp;vliquido" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

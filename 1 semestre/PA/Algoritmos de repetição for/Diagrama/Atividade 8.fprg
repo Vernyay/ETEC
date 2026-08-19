@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-07 10:23:18 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MTg6MjYgIjsxOTM2"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MjM6MTggIjsxOzIwNDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vmaiorvalturamulher, vmenorvalturahomem, valtura, vsexo, i" type="Integer" array="False" size=""/>
+            <declare name="vtevemulher, vtevehomem" type="Boolean" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vmenorvalturahomem" expression="3"/>
+            <assign variable="vtevehomem" expression="False"/>
+            <assign variable="vtevemulher" expression="False"/>
+            <for variable="i" start="1" end="20" direction="inc" step="1">
+                <input variable="valtura"/>
+                <input variable="vsexo"/>
+                <if expression="vsexo == 1">
+                    <then>
+                        <assign variable="vtevemulher" expression="True"/>
+                        <if expression="valtura &gt; vmaiorvalturamulher">
+                            <then>
+                                <assign variable="vmaiorvalturamulher" expression="valtura"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="vsexo == 2">
+                            <then>
+                                <assign variable="vtevehomem" expression="True"/>
+                                <if expression="valtura &lt; vmenorvalturahomem">
+                                    <then>
+                                        <assign variable="vmenorvalturahomem" expression="valtura"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;C&#243;digo de vsexo inv&#225;lido! Dados ignorados para este c&#225;lculo.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <if expression="vtevemulher">
+                <then>
+                    <output expression="&quot;A maior mulher tem: &quot;&amp;vmaiorvalturamulher&amp;&quot;m&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;N&#227;o foram registradas mulheres no grupo.&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="vtevehomem">
+                <then>
+                    <output expression="&quot;O menor homem tem: &quot;&amp;vmenorvalturahomem&amp;&quot;m&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;N&#227;o foram registrados homens no grupo.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

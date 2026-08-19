@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-07 10:31:08 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MDg6NDkgIjsxOTQw"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MzE6MDggIjsyOzIwNDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vsomaidadeotimo, vqtdotimo, vqtdregular, vqtdbom, vidade, vopiniao, vmediaotimo, vpercentagembom, i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vsomaidadesotimo" expression="0"/>
+            <assign variable="vqtdotimo" expression="0"/>
+            <assign variable="vqtdbom" expression="0"/>
+            <assign variable="vqtdregular" expression="0"/>
+            <for variable="i" start="1" end="15" direction="inc" step="1">
+                <input variable="vidade"/>
+                <input variable="vopiniao"/>
+                <if expression="vopiniao == 3">
+                    <then>
+                        <assign variable="vsomaidadesotimo" expression="vsomaidadesotimo+vidade"/>
+                        <assign variable="vqtdotimo" expression="vqtdotimo+1"/>
+                    </then>
+                    <else>
+                        <if expression="vopiniao == 2">
+                            <then>
+                                <assign variable="vqtdbom" expression="vqtdbom+1"/>
+                            </then>
+                            <else>
+                                <if expression="vopiniao == 1">
+                                    <then>
+                                        <assign variable="vqtdregular" expression="vqtdregular+1"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Op&#231;&#227;o inv&#225;lida! Este voto n&#227;o ser&#225; contabilizado.&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <if expression="vqtdotimo &gt; 0">
+                <then>
+                    <assign variable="vmediaotimo" expression="vsomaidadesotimo / vqtdotimo"/>
+                </then>
+                <else>
+                    <assign variable="vmediaotimo" expression="0"/>
+                </else>
+            </if>
+            <assign variable="vpercentagembom" expression="(vqtdbom / 15) * 100"/>
+            <if expression="vqtdotimo &gt; 0">
+                <then>
+                    <output expression="&quot;A) M&#233;dia de vidade (&#211;timo): &quot;&amp;vmediaotimo&amp;&quot; anos&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;A) M&#233;dia de vidade (&#211;timo): Nenhuma pessoa respondeu &#243;timo.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;B) Quantidade de pessoas (Regular): &quot;&amp;vqtdregular" newline="True"/>
+            <output expression="&quot;C) Percentagem de pessoas (Bom): &quot;&amp;vpercentagembom&amp;&quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

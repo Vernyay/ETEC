@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 09:39:43 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6MzQ6MjYgIjsxOTM4"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6Mzk6NDMgIjsxOzIwNTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vlargura, valtura, vconseguepintar, varea, vlatas" type="Real" array="False" size=""/>
+            <input variable="vlargura"/>
+            <input variable="valtura"/>
+            <input variable="vconseguepintar"/>
+            <assign variable="varea" expression="vlargura*valtura"/>
+            <assign variable="vlatas" expression="varea/vconseguepintar"/>
+            <output expression="&quot;Sua parede tem&quot;&amp;varea&amp;&quot;metros&quot;" newline="True"/>
+            <output expression="&quot;Voc&#234; precisa de&quot;&amp;vlatas&amp;&quot;latas de tinta&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

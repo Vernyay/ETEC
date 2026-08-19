@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 8"/>
+        <attribute name="authors" value="willian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 03:44:15 PM"/>
+        <attribute name="created" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDM6NDE6MTkgUE07MjU2MQ=="/>
+        <attribute name="edited" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDM6NDQ6MTUgUE07MTsyNjY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="pare" type="Boolean" array="False" size=""/>
+            <assign variable="pare" expression="True"/>
+            <while expression="pare==True">
+                <input variable="num"/>
+                <if expression="num&lt;0">
+                    <then>
+                        <assign variable="pare" expression="False"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Esse n&#250;mero &#233; par? &quot;&amp;par(num)" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="par" type="Boolean" variable="pos">
+        <parameters>
+            <parameter name="inte" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pos" type="Boolean" array="False" size=""/>
+            <if expression="inte%2==0">
+                <then>
+                    <assign variable="pos" expression="True"/>
+                </then>
+                <else>
+                    <assign variable="pos" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

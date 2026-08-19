@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="cabeça">
+    <h1 class="titulo">Cadastro</h1>
+    <div>
+        <a href="index.html"><button>Voltar</button></a>
+    </div>
+</header>
+
+
+
+<form class="formulario">
+
+    <label>Nome</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Telefone</label>
+    <input type="tel">
+
+    <label>CPF</label>
+    <input type="text" required>
+
+    <label>Data de nascimento</label>
+    <input type="date">
+
+    <label>UF</label>
+    <select>
+        <option>SP</option>
+        <option>RJ</option>
+        <option>MG</option>
+        <option>PR</option>
+    </select>
+    
+    <label>Sexo</label>
+    
+    <div class="radio-group">
+        <input type="radio" name="sexo"> Masculino
+        <input type="radio" name="sexo"> Feminino
+        <input type="radio" name="sexo"> Outro
+    </div>
+
+    <label>Hobbies</label>
+
+    <div class="check-group">
+        <input type="checkbox"> Games
+        <input type="checkbox"> Música
+        <input type="checkbox"> Filmes
+        <input type="checkbox"> Tecnologia
+    </div>
+
+    <button class="cadastro">Cadastrar</button>
+
+</form>
+
+</body>
+</html>

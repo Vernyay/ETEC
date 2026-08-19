@@ -1,0 +1,24 @@
+@startuml actor
+left to right direction
+
+actor "usuario" as usuario
+actor "bibliotecario" as bibliotecario
+
+rectangle "Sistema de Gerenciamento de bliblioteca Online" { 
+usecase "reservar exemplares" as UC1 
+usecase "reservar exemplares" as UC2
+usecase "reservar exemplares"\n"de empréstimos" as UC3
+usecase "reenovar livros" as UC4
+usecase "adicionar livros" as UC5
+usecase "gerenciar emprestimos" as UC6
+usecase "cadrastrar usuario" as UC7
+}
+
+
+usuario -->UC1
+usuario -->UC2
+usuario -->UC3
+usuario -->UC4
+bibliotecario -->UC5
+bibliotecario -->UC6
+bibliotecario -->UC7

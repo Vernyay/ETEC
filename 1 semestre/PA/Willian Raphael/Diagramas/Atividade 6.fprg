@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 6"/>
+        <attribute name="authors" value="willian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 03:34:30 PM"/>
+        <attribute name="created" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDI6NTQ6NTUgUE07MjU2NA=="/>
+        <attribute name="edited" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDM6MzQ6MzAgUE07MTsyNjY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <declare name="pare" type="Boolean" array="False" size=""/>
+            <assign variable="pare" expression="True"/>
+            <while expression="pare==True">
+                <input variable="idade"/>
+                <if expression="idade&lt;0">
+                    <then>
+                        <assign variable="pare" expression="False"/>
+                    </then>
+                    <else>
+                        <output expression="categoria(idade)" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="categoria" type="String" variable="class">
+        <parameters>
+            <parameter name="idade" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="class" type="String" array="False" size=""/>
+            <if expression="idade &gt;= 5 and idade &lt;= 7">
+                <then>
+                    <assign variable="class" expression="&quot;Infantil A&quot;"/>
+                </then>
+                <else>
+                    <if expression="idade&gt;=8 and idade&lt;=10">
+                        <then>
+                            <assign variable="class" expression="&quot;Infantil B&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="idade&gt;=11 and idade&lt;=13">
+                                <then>
+                                    <assign variable="class" expression="&quot;Juvenil A&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="idade&gt;=14 and idade&lt;=17">
+                                        <then>
+                                            <assign variable="class" expression="&quot;Juvenil B&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="class" expression="&quot;Adulto&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

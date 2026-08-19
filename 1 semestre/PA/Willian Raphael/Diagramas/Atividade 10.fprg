@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 10"/>
+        <attribute name="authors" value="willian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-21 04:45:57 PM"/>
+        <attribute name="created" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDQ6MDM6NTEgUE07MjU1Ng=="/>
+        <attribute name="edited" value="d2lsbGlhbjtXSUxMSUFOOzIwMjYtMDYtMjE7MDQ6NDU6NTcgUE07MTsyNjc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="filhos, percentual" type="Integer" array="False" size=""/>
+            <declare name="salario" type="Real" array="False" size=""/>
+            <do expression="salario &gt;= 0 AND filhos &gt;= 0">
+                <input variable="salario"/>
+                <input variable="filhos"/>
+                <if expression="salario &gt;= 0 AND filhos &gt;= 0">
+                    <then>
+                        <if expression="salario&lt;1000">
+                            <then>
+                                <assign variable="percentual" expression="9"/>
+                            </then>
+                            <else>
+                                <if expression="salario&lt;=3000">
+                                    <then>
+                                        <assign variable="percentual" expression="7"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="percentual" expression="5"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <if expression="filhos&lt;3">
+                            <then>
+                                <assign variable="percentual" expression="percentual+1"/>
+                            </then>
+                            <else>
+                                <assign variable="percentual" expression="percentual+2"/>
+                            </else>
+                        </if>
+                        <call expression="reajustesalario(salario, filhos)"/>
+                        <assign variable="salario" expression="reajustesalario(salario, filhos)"/>
+                        <output expression="&quot;&#205;ndice de reajuste: &quot; &amp; percentual &amp; &quot;%&quot;" newline="True"/>
+                        <output expression="&quot;Novo sal&#225;rio: R$ &quot; &amp; salario" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+        </body>
+    </function>
+    <function name="reajustesalario" type="Real" variable="salario">
+        <parameters>
+            <parameter name="salario" type="Real" array="False"/>
+            <parameter name="filhos" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="percentual" type="Integer" array="False" size=""/>
+            <if expression="salario&lt;1000">
+                <then>
+                    <assign variable="percentual" expression="9"/>
+                </then>
+                <else>
+                    <if expression="salario&lt;=3000">
+                        <then>
+                            <assign variable="percentual" expression="7"/>
+                        </then>
+                        <else>
+                            <assign variable="percentual" expression="5"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="filhos&lt;3">
+                <then>
+                    <assign variable="percentual" expression="percentual+1"/>
+                </then>
+                <else>
+                    <assign variable="percentual" expression="percentual+2"/>
+                </else>
+            </if>
+            <assign variable="salario" expression="salario+(salario*percentual/100)"/>
+        </body>
+    </function>
+</flowgorithm>

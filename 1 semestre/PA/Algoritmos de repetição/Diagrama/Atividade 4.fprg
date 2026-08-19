@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 4"/>
+        <attribute name="authors" value="willraphael"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-01 10:21:11 AM"/>
+        <attribute name="created" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDQtMjY7MDQ6MDQ6NTAgUE07MzQ3Mg=="/>
+        <attribute name="edited" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDUtMDE7MTA6MjE6MTEgQU07MjszNTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum, vmediamaior, vmediamenor, vcont, vcontmaior, vcontmenor" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <assign variable="vmediamaior" expression="0"/>
+            <assign variable="vmediamenor" expression="0"/>
+            <while expression="vcont&lt;10">
+                <input variable="vnum"/>
+                <if expression="vnum&gt;=10">
+                    <then>
+                        <assign variable="vmediamaior" expression="vmediamaior+vnum"/>
+                        <assign variable="vcontmaior" expression="vcontmaior+1"/>
+                    </then>
+                    <else>
+                        <assign variable="vmediamenor" expression="vmediamenor+vnum"/>
+                        <assign variable="vcontmenor" expression="vcontmenor+1"/>
+                    </else>
+                </if>
+                <assign variable="vcont" expression="vcont+1"/>
+            </while>
+            <if expression="vcontmaior&gt;0">
+                <then>
+                    <assign variable="vmediamaior" expression="vmediamaior/vcontmaior"/>
+                </then>
+                <else>
+                    <output expression="&quot;Nenhum n&#250;mero maior ou igual a 10 foi digitado.&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="vcontmenor&gt;0">
+                <then>
+                    <assign variable="vmediamenor" expression="vmediamenor/vcontmenor"/>
+                </then>
+                <else>
+                    <output expression="&quot;Nenhum n&#250;mero menor que 10 foi digitado.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

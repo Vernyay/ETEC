@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-07 10:26:55 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMDk6NDg6NDMgIjsxOTQ2"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNS0wNzsiMTA6MjY6NTUgIjsyOzIwNDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vpessoa, i, vmaiorsalario, vfilho, vmediasalario, vcontsalario, vsalario, vmediafilho, vsalario1200" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vmediasalario" expression="0"/>
+            <assign variable="vmediafilho" expression="0"/>
+            <assign variable="vsalario1200" expression="0"/>
+            <for variable="i" start="1" end="20" direction="inc" step="1">
+                <input variable="vsalario"/>
+                <input variable="vfilho"/>
+                <assign variable="vmediasalario" expression="vmediasalario+vsalario"/>
+                <assign variable="vmediafilho" expression="vmediafilho+vfilho"/>
+                <if expression="vsalario&gt;vmaiorsalario">
+                    <then>
+                        <assign variable="vmaiorsalario" expression="vsalario"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vsalario&lt;1200">
+                    <then>
+                        <assign variable="vsalario1200" expression="vsalario1200+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="vmediasalario" expression="vmediasalario/20"/>
+            <assign variable="vmediafilho" expression="vmediafilho/20"/>
+            <assign variable="vsalario1200" expression="(vsalario1200*100)/20"/>
+            <output expression="&quot;A media do sal&#225;rio da popula&#231;&#227;o &#233; R$&quot;&amp;vmediasalario" newline="True"/>
+            <output expression="&quot;A media de filhos da popula&#231;&#227;o &#233; &quot;&amp;vmediafilho" newline="True"/>
+            <output expression="&quot;O maior sal&#225;rio &#233; &quot;&amp;vmaiorsalario" newline="True"/>
+            <output expression="&quot;O percentual de pessoas com um sal&#225;rio at&#233; R$1200 &#233; &quot;&amp;vsalario1200" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

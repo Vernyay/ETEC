@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-30 10:42:32 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6MzY6NTAgIjsxOTI3"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6NDI6MzIgIjsxOzIwMzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vsexo, vidade, vmediamulher, vmediatodos, vmediahomens, vcontmulher, vconthomem, vcont" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <assign variable="vcontmulher" expression="0"/>
+            <assign variable="vconthomem" expression="0"/>
+            <while expression="vcont&lt;12">
+                <input variable="vsexo"/>
+                <input variable="vidade"/>
+                <assign variable="vmediatodos" expression="vmediatodos+vidade"/>
+                <if expression="vsexo==1">
+                    <then>
+                        <assign variable="vmediamulher" expression="vmediamulher+vidade"/>
+                        <assign variable="vcontmulher" expression="vcontmulher+1"/>
+                    </then>
+                    <else>
+                        <assign variable="vmediahomens" expression="vmediahomens+vidade"/>
+                        <assign variable="vconthomem" expression="vconthomem+1"/>
+                    </else>
+                </if>
+                <assign variable="vcont" expression="vcont+1"/>
+            </while>
+            <assign variable="vmediatodos" expression="vmediatodos/12"/>
+            <assign variable="vmediamulher" expression="vmediamulher/vcontmulher"/>
+            <assign variable="vmediahomens" expression="vmediahomens/vconthomem"/>
+            <output expression="&quot;A m&#233;dia de todas as idades &#233; &quot;&amp;vmediatodos" newline="True"/>
+            <output expression="&quot;A m&#233;dia das idades das mulheres &#233; &quot;&amp;vmediamulher" newline="True"/>
+            <output expression="&quot;A m&#233;dia das idades dos homens &#233; &quot;&amp;vmediahomens" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

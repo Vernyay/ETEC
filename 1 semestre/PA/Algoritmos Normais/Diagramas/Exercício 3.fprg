@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 09:26:39 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6MjI6NTIgIjsxOTM0"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDY7MjAyNi0wMy0xMjsiMDk6MjY6MzkgIjsxOzIwNTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vsalariofixo, vcarros, vvendas, vtotal" type="Real" array="False" size=""/>
+            <input variable="vsalariofixo"/>
+            <input variable="vcarros"/>
+            <input variable="vvendas"/>
+            <assign variable="vtotal" expression="(2 * vsalariofixo) + (50 * vcarros) + (vvendas * 5 / 100)"/>
+            <output expression="&quot;O salario total do vendedor&quot;&amp;vtotal&amp;&quot;reais&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

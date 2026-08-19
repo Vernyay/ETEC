@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-06 08:04:30 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6Mjg6MTcgIjsxOTMx"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNS0wNjsiMDg6MDQ6MzAgIjsyOzIwNDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vidade, vpeso, vmediaidade, vcontpeso, vcont" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <assign variable="vcontpeso" expression="0"/>
+            <for variable="vcont" start="1" end="10" direction="inc" step="1">
+                <input variable="vpeso"/>
+                <input variable="vidade"/>
+                <assign variable="vmediaidade" expression="vmediaidade+vidade"/>
+                <if expression="vpeso&gt;80">
+                    <then>
+                        <assign variable="vcontpeso" expression="vcontpeso+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="vmediaidade" expression="vmediaidade/10"/>
+            <output expression="&quot;Tem &quot;&amp;vcontpeso&amp;&quot; pessoas com mais de 80 kg&quot;" newline="True"/>
+            <output expression="&quot;A m&#233;dia das idades &#233; &quot;&amp;vmediaidade" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

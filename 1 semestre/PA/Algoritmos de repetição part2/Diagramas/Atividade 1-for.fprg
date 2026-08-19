@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-06 08:03:30 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6MjU6MzggIjsxOTMx"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNS0wNjsiMDg6MDM6MzAgIjsyOzIwMzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum, vsoma, vmedia, vcont" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <for variable="vcont" start="1" end="15" direction="inc" step="1">
+                <input variable="vnum"/>
+                <assign variable="vsoma" expression="vsoma+vnum"/>
+            </for>
+            <assign variable="vmedia" expression="vsoma/15"/>
+            <output expression="&quot;A soma dos n&#250;meros &#233; &quot;&amp;vsoma" newline="True"/>
+            <output expression="&quot;A m&#233;dia dos n&#250;meros &#233; &quot;&amp;vmedia" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

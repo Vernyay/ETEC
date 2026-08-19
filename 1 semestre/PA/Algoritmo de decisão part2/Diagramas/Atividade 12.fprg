@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-15 07:24:26 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0xNTsiMDc6MjI6MDAgIjsxOTI3"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTM7MjAyNi0wNC0xNTsiMDc6MjQ6MjYgIjsxOzIwNDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vbonus, vsalario, vtemposervico" type="Real" array="False" size=""/>
+            <input variable="vsalario"/>
+            <input variable="vtemposervico"/>
+            <if expression="vtemposervico &gt;= 5">
+                <then>
+                    <assign variable="vbonus" expression="vsalario*0.20"/>
+                </then>
+                <else>
+                    <assign variable="vbonus" expression="vsalario*0.10"/>
+                </else>
+            </if>
+            <output expression="&quot;B&#244;nus recebido: R$ &quot;&amp;vbonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

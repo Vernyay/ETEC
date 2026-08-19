@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="26038"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-30 10:36:48 "/>
+        <attribute name="created" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6MzI6NTEgIjsxOTI0"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMTI7MjAyNi0wNC0zMDsiMTA6MzY6NDggIjsxOzIwNDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum, vcont10, vcontentre, vcontmenores, vcont" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <assign variable="vcont10" expression="0"/>
+            <assign variable="vcontentre" expression="0"/>
+            <assign variable="vcontmenores" expression="0"/>
+            <while expression="vcont&lt;10">
+                <input variable="vnum"/>
+                <if expression="vnum&gt;10">
+                    <then>
+                        <assign variable="vcont10" expression="vcont10+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vnum&lt;5">
+                    <then>
+                        <assign variable="vcontmenores" expression="vcontmenores+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vnum&gt;7 and vnum&lt;=15">
+                    <then>
+                        <assign variable="vcontentre" expression="vcontentre+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="vcont" expression="vcont+1"/>
+            </while>
+            <output expression="&quot;Existe &quot;&amp;vcont10&amp;&quot; n&#250;meros maiores que 10&quot;" newline="True"/>
+            <output expression="&quot;Existe &quot;&amp;vcontentre&amp;&quot; n&#250;meros entre 7 e 15&quot;" newline="True"/>
+            <output expression="&quot;Existe &quot;&amp;vcontmenores&amp;&quot; n&#250;meros menores que 5&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

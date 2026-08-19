@@ -1,0 +1,60 @@
+/*CSS*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header{
+    background: lightgray;
+    padding: 20px;
+    color: lightcoral;
+    text-align: center;
+}
+
+nav{
+    background: darkgray;
+    padding: 10px;
+    color: darkred;
+    text-align: center;
+}
+
+nav a{
+    color: crimson;
+    padding: 10px;
+    text-decoration: none;
+}
+
+main{
+    padding: 15px;
+}
+
+article{
+    background: grey;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+aside{
+    background: lavenderblush;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+footer{
+    background: lightgray;
+    color: lightcoral;
+    text-align: center;
+    padding: 10px;
+}
+
+#Principal{
+    color: rgb(83, 89, 89);
+    text-align: center;
+}
+
+.caps{
+    color: lightcoral;
+}

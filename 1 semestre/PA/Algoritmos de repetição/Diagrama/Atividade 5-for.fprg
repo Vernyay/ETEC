@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Atividade 5"/>
+        <attribute name="authors" value="willraphael"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-05 08:48:46 "/>
+        <attribute name="created" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDQtMjY7MDQ6MTI6MDYgUE07MzQ3Mg=="/>
+        <attribute name="edited" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDUtMDE7MTA6MzM6MDYgQU07MjszNTYw"/>
+        <attribute name="edited" value="MjYwMzg7TEFCNS1NMDE7MjAyNi0wNS0wNTsiMDg6NDg6NDYgIjsxOzIwNTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnumerosecreto, vtentativas, vchute" type="Integer" array="False" size=""/>
+            <declare name="vacertou" type="Boolean" array="False" size=""/>
+            <assign variable="vnumerosecreto" expression="7"/>
+            <assign variable="vtentativas" expression="0"/>
+            <assign variable="vacertou" expression="False"/>
+            <for variable="vtentativa" start="1" end="3" direction="inc" step="1">
+                <input variable="vchute"/>
+                <if expression="vchute==vnumerosecreto">
+                    <then>
+                        <output expression="&quot;Parab&#233;ns! Voc&#234; descobriu o n&#250;mero &quot;&amp;vnumerosecreto" newline="True"/>
+                        <assign variable="vacertou" expression="True"/>
+                        <assign variable="vtentativas" expression="3"/>
+                    </then>
+                    <else>
+                        <if expression="vchute&lt;vnumerosecreto">
+                            <then>
+                                <output expression="&quot;Dica: O n&#250;mero secreto &#233; MAIOR.&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Dica: O n&#250;mero secreto &#233; MENOR.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <if expression="not vacertou">
+                <then>
+                    <output expression="&quot;Que pena! Suas chances acabaram. O n&#250;mero era &quot;&amp;vnumerosecreto" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Atividade 1"/>
+        <attribute name="authors" value="willraphael"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-01 10:06:23 AM"/>
+        <attribute name="created" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDQtMjY7MDM6MjM6MTIgUE07MzQ3MA=="/>
+        <attribute name="edited" value="d2lsbHJhcGhhZWw7V0lMTFJBUEhBRUwwMzA0OzIwMjYtMDUtMDE7MTA6MDY6MjMgQU07MzszNTYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vnum, vsomapares, vsomaimpares, vcont" type="Integer" array="False" size=""/>
+            <assign variable="vcont" expression="0"/>
+            <assign variable="vsomaimpares" expression="0"/>
+            <assign variable="vsomapares" expression="0"/>
+            <while expression="vcont&lt;10">
+                <input variable="vnum"/>
+                <if expression="vnum%2==0">
+                    <then>
+                        <assign variable="vsomapares" expression="vsomapares+vnum"/>
+                    </then>
+                    <else>
+                        <assign variable="vsomaimpares" expression="vsomaimpares+vnum"/>
+                    </else>
+                </if>
+                <assign variable="vcont" expression="vcont+1"/>
+            </while>
+            <output expression="&quot;A soma dos &#237;mpares &#233; &quot;&amp;vsomaimpares" newline="True"/>
+            <output expression="&quot;A soma dos pares &#233; &quot;&amp;vsomapares" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
