@@ -4,7 +4,6 @@ void main() {
   int valor = int.parse(stdin.readLineSync()!);
   int number = valor;
   if (number>0 && number<1000000) {
-    //Calcula a quantidade de notas de 100 reais
     int cem = valor ~/ 100;
     valor %=100; 
     int cinq = valor ~/ 50;
