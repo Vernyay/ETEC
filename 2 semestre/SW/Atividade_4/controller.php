@@ -13,5 +13,6 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
     $nome = $produto->getNome();
     $total = $produto->calcularValorTotal();
     $desc = $produto->desconto();
-    include 'resultado.php';
+    $estoque = $produto->estaEmEstoqueBaixo();
+    include "resultado.php";
 }

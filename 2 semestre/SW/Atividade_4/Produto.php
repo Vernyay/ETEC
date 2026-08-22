@@ -37,5 +37,10 @@ class Produto {
         $valorDesconto = $valorTotal * ($this->perc/100);
         return $valorTotal - $valorDesconto;
     }
+    public function estaEmEstoqueBaixo() {
+        if ($this->quant<5){
+            return True;
+        }
+    }
     
 }
