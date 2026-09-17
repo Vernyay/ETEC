@@ -1,35 +1,28 @@
-import "dart:io";
+import 'dart:io';
 
 void main() {
-  int valor = int.parse(stdin.readLineSync()!);
-  int number = valor;
-  if (number>0 && number<1000000) {
-    int cem = valor ~/ 100;
-    valor %=100; 
-    int cinq = valor ~/ 50;
-    valor %= 50;
-    int vint = valor ~/ 20;
-    valor %= 20;
-    int dez = valor ~/ 10;
-    valor %= 10;
-    int cinc = valor ~/ 5;
-    valor %= 5;
-    int dois = valor ~/ 2;
-    valor %= 2;
-    int um = valor ~/ 1;
-    valor %= 1;
-
-    print("$number");
-    print("$cem nota(s) de R\$ 100,00");
-    print("$cinq nota(s) de R\$ 50,00");
-    print("$vint nota(s) de R\$ 20,00");
-    print("$dez nota(s) de R\$ 10,00");
-    print("$cinc nota(s) de R\$ 5,00");
-    print("$dois nota(s) de R\$ 2,00");
-    print("$um nota(s) de R\$ 1,00");
-
-  } else {
-    print("Presentention Error!");
-  }
+  String? input = stdin.readLineSync();
+  if (input == null) return;
   
+  double valorTotal = double.parse(input);
+  int centavos = (valorTotal * 100).round();
+
+  List<int> notas = [10000, 5000, 2000, 1000, 500, 200];
+  List<int> moedas = [100, 50, 25, 10, 5, 1];
+
+  print("NOTAS:");
+  for (int nota in notas) {
+    int quantidade = centavos ~/ nota;
+    centavos %= nota;
+    double valorReais = nota / 100;
+    print("$quantidade nota(s) de R\$ ${valorReais.toStringAsFixed(2)}");
+  }
+
+  print("MOEDAS:");
+  for (int moeda in moedas) {
+    int quantidade = centavos ~/ moeda;
+    centavos %= moeda;
+    double valorReais = moeda / 100;
+    print("$quantidade moeda(s) de R\$ ${valorReais.toStringAsFixed(2)}");
+  }
 }
