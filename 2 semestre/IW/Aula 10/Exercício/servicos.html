@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cursos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="carregou()" onresize="redimensionou()">
+
+    <header>
+
+        <h1>Serviços</h1>
+
+        <nav>
+
+            <a href="index.html" onmouseover="sobre(this)" onmouseout="fora(this)" onmousedown="baixo(this)" onmouseup="cima(this)">Home</a>
+
+            <a href="servicos.html" onmouseover="sobre(this)" onmouseout="fora(this)" onmousedown="baixo(this)" onmouseup="cima(this)">Serviços</a>
+
+        </nav>
+
+    </header>
+
+    <section class="pagina">
+
+        <h2>Nossos Serviços</h2>
+
+        <p>Veja a seguir os nossos Serviços disponíveis</p>
+
+        <div class="cards">
+
+            <div class="card" tabindex="0"
+                 onmouseover="sobre(this)"
+                 onmouseout="fora(this)"
+                 onmousedown="baixo(this)"
+                 onmouseup="cima(this)"
+                 onclick="clique()"
+                 ondblclick="duplo(this)"
+                 onkeydown="teclaBaixo(this, event)"
+                 onkeypress="teclaPress(event)"
+                 onkeyup="teclaCima(this)">
+
+                <h3>Resolulção de problemas Wi-fi</h3>
+
+                <p>Um serviço para resolver problemas com a Internet/Web</p>
+
+                <button onclick="alert('Acessando...')">Acessar</button>
+
+            </div>
+
+            <div class="card" tabindex="0"
+                 onmouseover="sobre(this)"
+                 onmouseout="fora(this)"
+                 onmousedown="baixo(this)"
+                 onmouseup="cima(this)"
+                 onclick="clique()"
+                 ondblclick="duplo(this)"
+                 onkeydown="teclaBaixo(this, event)"
+                 onkeypress="teclaPress(event)"
+                 onkeyup="teclaCima(this)">
+
+                <h3>Manutenção de Computadores</h3>
+
+                <p>Manutenção e Recuperação de Computadores</p>
+
+                <button onclick="alert('Acessando...')">Acessar</button>
+
+            </div>
+
+            <div class="card" tabindex="0"
+                 onmouseover="sobre(this)"
+                 onmouseout="fora(this)"
+                 onmousedown="baixo(this)"
+                 onmouseup="cima(this)"
+                 onclick="clique()"
+                 ondblclick="duplo(this)"
+                 onkeydown="teclaBaixo(this, event)"
+                 onkeypress="teclaPress(event)"
+                 onkeyup="teclaCima(this)">
+
+                <h3>Recuperação de Dados</h3>
+
+                <p>Um serviço para recuperar dados perdidos.</p>
+
+                <button onclick="alert('Acessando...')">Acessar</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <form class="formulario">
+
+        <h2>Contato</h2>
+
+        <label>Nome</label>
+
+        <input type="text" id="nome"
+               onfocus="foco(this)"
+               onchange="mudou(this)"
+               onblur="saiu(this)"
+               onkeydown="digitando(this)"
+               onkeyup="parou(this)">
+
+        <label>Email</label>
+
+        <input type="email" id="email"
+               onfocus="foco(this)"
+               onchange="mudou(this)"
+               onblur="saiu(this)"
+               onkeydown="digitando(this)"
+               onkeyup="parou(this)">
+
+        <label>Telefone</label>
+
+        <input type="tel"
+               onfocus="foco(this)"
+               onchange="mudou(this)"
+               onblur="saiu(this)"
+               onkeydown="digitando(this)"
+               onkeyup="parou(this)">
+
+        <label>Cidade</label>
+
+        <input type="text" id="cidade"
+               onfocus="foco(this)"
+               onchange="mudou(this)"
+               onblur="saiu(this)"
+               onkeydown="digitando(this)"
+               onkeyup="parou(this)">
+
+        <label>Estado</label>
+
+        <select onfocus="foco(this)"
+                onchange="mudou(this)"
+                onblur="saiu(this)"
+                onkeydown="digitando(this)"
+                onkeyup="parou(this)">
+            <option>SP</option>
+            <option>RJ</option>
+            <option>MG</option>
+            <option>PR</option>
+        </select>
+
+        <label>Mensagem</label>
+
+        <input type="text" class="mensagem" maxlength="140"
+               onfocus="foco(this)"
+               onchange="mudou(this)"
+               onblur="saiu(this)"
+               onkeydown="digitando(this)"
+               onkeyup="parou(this)">
+
+        <p id="contador"></p>
+
+        <button class="cadastro" onclick="enviar()">Enviar</button>
+
+    </form>
+
+    <footer>
+
+        <p>&copy; Serviços - TechConnect Solutions - 2026</p>
+
+        <p id="tela"></p>
+
+    </footer>
+
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>

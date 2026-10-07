@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+<head>
+<meta charset="UTF8">
+<meta name="viewport" content="width=device=width, initial-scale=1.0">
+<title> Eventos </title>
+
+</head>
+<body>
+
+<button ondblclick="eventoClick()"> clique aqui </button>
+
+<button onmouseover="eventoMouse()"> Passe o mouse aqui </button>
+
+<div id="teste" onmouseover="viracor()";  onmouseout="viracor2()"; style="margin:auto auto; width:80%; height:200px; background:black"> </div>
+
+<button id="nome" onmousedown="tiraTexto()" onmouseup="adicionaTexto()" > <br> </button>
+
+<script src="java.js"></script>
+
+<input onfocus="escrita()" id="texto" style="padding:80px; font-size:40px;" type="text";
+placeholder="Digite algo" value="Escreva aqui">
+
+
+<select onchange="mudou()" id="itens">
+	<option value="1"> Valor 1 </option>
+	<option value="2"> Valor 2 </option>
+	<option value="3"> Valor 3 </option>
+	<option value="4"> Valor 4 </option>
+	<option value="5"> Valor 5 </option>
+</select>
+
+
+</body>
+
+</html>
