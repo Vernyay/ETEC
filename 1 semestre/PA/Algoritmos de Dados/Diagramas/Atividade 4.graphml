@@ -264,18 +264,18 @@
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="00" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelPa~ameter>
-      "   </y:NodeLabel>
-   $    </y:GenericNo$e>
-      </data>
-    </nmde>
-    <node id=*n14">
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n14">
       <data key="d5"/>
-      <data key="d6">
-        <y:GenericNode configuration½"com.ywor+s®flowchart.process">
-          <y:Ceometry height="40.2" width="80.0" x="489.0456454803966" y?"1372.0402402214909"/>
-      "   <y:Fill color="E8DEF?" co|or0="#B7C9E3" tra~sparent="false"/>
+      <data key="d6">
+        <y:GenericNode configuration="com.yworks.flowchart.process">
+          <y:Geometry height="40.0" width="80.0" x="489.0456454803966" y="1172.0402402214909"/>
+          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="73.369140625" x="3.3154296875" y="10.6494140625">vmaiores+=1<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
