@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <h1>Eventos JavaScript</h1>
+        <p>Explicação e exemplo de cada evento</p>
+    </header>
+
+    <nav class="menu">
+        <button class="aba ativa" data-guia="guia1">Guia 1 - Clique</button>
+        <button class="aba" data-guia="guia2">Guia 2 - Mouse</button>
+        <button class="aba" data-guia="guia3">Guia 3 - Formulários</button>
+        <button class="aba" data-guia="guia4">Guia 4 - Teclado</button>
+        <button class="aba" data-guia="guia5">Guia 5 - Janela</button>
+    </nav>
+
+    <main class="conteudo">
+
+        <section class="guia ativa" id="guia1">
+            <h2>Guia 1 - Eventos de Clique</h2>
+
+            <article class="card">
+                <h3>onclick</h3>
+                <p><strong>O que é:</strong> executa uma ação sempre que o usuário clica em um elemento.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onclick = função</code></p>
+                <div class="exemplo">
+                    <button id="btnClique">Clique aqui</button>
+                    <p id="saidaClique">Cliques: 0</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>ondblclick</h3>
+                <p><strong>O que é:</strong> executa uma ação quando o usuário faz dois cliques rápidos no elemento.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.ondblclick = função</code></p>
+                <div class="exemplo">
+                    <button id="btnDuplo">Clique duas vezes</button>
+                    <p id="saidaDuplo">Duplo cliques: 0</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onmousedown</h3>
+                <p><strong>O que é:</strong> dispara no momento em que o botão do mouse é pressionado sobre o elemento.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onmousedown = função</code></p>
+                <div class="exemplo">
+                    <button id="btnBaixo">Pressione o botão</button>
+                    <p id="saidaBaixo">Aguardando...</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onmouseup</h3>
+                <p><strong>O que é:</strong> dispara quando o botão do mouse é solto após ter sido pressionado.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onmouseup = função</code></p>
+                <div class="exemplo">
+                    <button id="btnCima">Pressione e solte</button>
+                    <p id="saidaCima">Aguardando...</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="guia" id="guia2">
+            <h2>Guia 2 - Eventos do Mouse</h2>
+
+            <article class="card">
+                <h3>onmouseover</h3>
+                <p><strong>O que é:</strong> dispara quando o ponteiro do mouse entra dentro do elemento.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onmouseover = função</code></p>
+                <div class="exemplo">
+                    <div class="area" id="areaSobre">Passe o mouse por aqui</div>
+                    <p id="saidaSobre">Fora do elemento</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onmouseout</h3>
+                <p><strong>O que é:</strong> dispara quando o ponteiro do mouse sai do elemento.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onmouseout = função</code></p>
+                <div class="exemplo">
+                    <div class="area" id="areaFora">Tire o mouse daqui</div>
+                    <p id="saidaFora">Dentro do elemento</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onmousemove</h3>
+                <p><strong>O que é:</strong> dispara continuamente enquanto o mouse se move dentro do elemento.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onmousemove = função</code></p>
+                <div class="exemplo">
+                    <div class="area" id="areaMove">Mova o mouse aqui</div>
+                    <p id="saidaMove">X: 0 | Y: 0</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="guia" id="guia3">
+            <h2>Guia 3 - Eventos de Formulários</h2>
+
+            <article class="card">
+                <h3>onfocus</h3>
+                <p><strong>O que é:</strong> dispara quando um campo recebe o foco, ou seja, quando o usuário clica nele para começar a digitar.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onfocus = função</code></p>
+                <div class="exemplo">
+                    <input type="text" id="campoFoco" placeholder="Clique neste campo">
+                    <p id="saidaFoco">Campo sem foco</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onchange</h3>
+                <p><strong>O que é:</strong> dispara quando o valor de um campo é alterado e o usuário confirma a mudança (sai do campo).</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onchange = função</code></p>
+                <div class="exemplo">
+                    <select id="selectCor">
+                        <option value="">Escolha uma cor</option>
+                        <option value="vermelho">Vermelho</option>
+                        <option value="azul">Azul</option>
+                        <option value="verde">Verde</option>
+                    </select>
+                    <p id="saidaCor">Nenhuma cor escolhida</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onblur</h3>
+                <p><strong>O que é:</strong> dispara quando um campo perde o foco, ou seja, quando o usuário sai dele.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onblur = função</code></p>
+                <div class="exemplo">
+                    <input type="text" id="campoSai" placeholder="Digite e depois clique em outro lugar">
+                    <p id="saidaSai">Campo com foco</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="guia" id="guia4">
+            <h2>Guia 4 - Eventos de Teclado</h2>
+
+            <article class="card">
+                <h3>onkeydown</h3>
+                <p><strong>O que é:</strong> dispara no momento em que uma tecla é pressionada para baixo.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onkeydown = função</code></p>
+                <div class="exemplo">
+                    <input type="text" id="campoTecla" placeholder="Pressione uma tecla">
+                    <p id="saidaTecla">Nenhuma tecla pressionada</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onkeypress</h3>
+                <p><strong>O que é:</strong> dispara quando uma tecla de caractere é pressionada (letras e números). Não detecta teclas como Shift ou Ctrl.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onkeypress = função</code></p>
+                <div class="exemplo">
+                    <input type="text" id="campoCaractere" placeholder="Digite um caractere">
+                    <p id="saidaCaractere">Nenhum caractere digitado</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onkeyup</h3>
+                <p><strong>O que é:</strong> dispara quando uma tecla é solta após ser pressionada.</p>
+                <p><strong>Sintaxe:</strong> <code>elemento.onkeyup = função</code></p>
+                <div class="exemplo">
+                    <input type="text" id="campoSolta" placeholder="Solte a tecla">
+                    <p id="saidaSolta">Nenhuma tecla solta</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="guia" id="guia5">
+            <h2>Guia 5 - Eventos da Janela</h2>
+
+            <article class="card">
+                <h3>onload</h3>
+                <p><strong>O que é:</strong> dispara quando a página (ou uma imagem) terminou de ser carregada completamente.</p>
+                <p><strong>Sintaxe:</strong> <code>window.onload = função</code></p>
+                <div class="exemplo">
+                    <p id="saidaLoad">Carregando página...</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>onresize</h3>
+                <p><strong>O que é:</strong> dispara quando a janela do navegador é redimensionada (aumentada ou diminuída).</p>
+                <p><strong>Sintaxe:</strong> <code>window.onresize = função</code></p>
+                <div class="exemplo">
+                    <p id="saidaResize">Largura: 0px | Altura: 0px</p>
+                    <button id="btnResize">Redimensionar janela</button>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Aula 11 - Introdução ao JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
